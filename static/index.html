@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>matte-python</title>
+
+    <!-- CodeMirror for code editor -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [['$$', '$$']],
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+
+<body>
+    <div id="app" class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo"><img src="logo.png" alt="Logotyp för sidan"> matte-python <img src="logo.png" alt="Logotyp för sidan"></div>
+                <div class="subtitle">Programmering för gymnasiets mattekurser</div>
+            </div>
+
+            <nav class="lesson-nav" id="lessonList">
+                <!-- Lessons will be injected here -->
+                <div class="nav-loading">Laddar lektioner...</div>
+            </nav>
+
+            <div class="nav-section-title"
+                style="padding: 10px 20px; font-weight: 600; color: #a1a1aa; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 10px;">
+                Aktiviteter</div>
+            <nav class="activity-nav" id="activityList">
+                <!-- Activities will be injected here -->
+            </nav>
+
+            <div class="sidebar-footer">
+                <div style="font-size: 0.75rem; color: #94a3b8;">Din sparlänk:</div>
+                <div style="display: flex; gap: 5px;">
+                    <input type="text" id="sidebarLinkInput" readonly style="flex: 1; font-size: 0.7rem; padding: 4px 6px; background: #0f172a; border: 1px solid #334155; color: #cbd5e1; border-radius: 4px;">
+                    <button id="copySidebarLinkBtn" class="btn btn-outline" style="padding: 4px 8px; font-size: 0.7rem;">Kopiera</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Modal for saving link -->
+            <div id="linkModal" class="modal hidden">
+                <div class="modal-content">
+                    <h2>Spara dina framsteg</h2>
+                    <p>Du behöver inte logga in! Men för att kunna fortsätta på en annan dator (eller om du rensar
+                        webbläsaren) måste du spara denna unika länk:</p>
+                    <div class="link-box">
+                        <input type="text" id="uniqueLinkInput" readonly>
+                        <button id="copyLinkBtn" class="btn btn-primary">Kopiera</button>
+                    </div>
+                    <p class="small-text">Spara länken som ett bokmärke, eller maila den till dig själv.</p>
+                    <button id="closeModalBtn" class="btn btn-outline">Stäng</button>
+                </div>
+            </div>
+
+            <div id="contentArea" class="content-area">
+                <div class="welcome-screen">
+                    <h1>Välkommen!</h1>
+                    <p>Välj en lektion i menyn till vänster för att börja.</p>
+                    <div id="pyodideStatus" class="status-badge loading">Laddar Python... (tar några sekunder)</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
