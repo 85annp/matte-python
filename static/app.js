@@ -245,8 +245,9 @@ async function openLesson(lesson) {
 
     html += `</div></div>`;
     contentArea.innerHTML = html;
-    contentArea.scrollTop = 0;
+    document.querySelector('.main-content').scrollTop = 0;
     window.scrollTo(0, 0);
+    if (typeof closeMobileMenu === 'function') closeMobileMenu();
     await renderMath();
 
     // Initialize CodeMirror instances
@@ -477,8 +478,9 @@ async function openActivity(activity) {
     `;
 
     contentArea.innerHTML = html;
-    contentArea.scrollTop = 0;
+    document.querySelector('.main-content').scrollTop = 0;
     window.scrollTo(0, 0);
+    if (typeof closeMobileMenu === 'function') closeMobileMenu();
     await renderMath();
 
     const textarea = document.getElementById(`activity-editor-${activity.id}`);
@@ -591,3 +593,28 @@ async function saveActivityState(activityId) {
         console.error(e);
     }
 }
+
+// Mobile Menu Logic
+function closeMobileMenu() {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    if (sidebar && overlay) {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('active');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+
+    if (mobileMenuBtn && sidebar && overlay) {
+        mobileMenuBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', closeMobileMenu);
+    }
+});
