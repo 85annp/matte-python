@@ -477,6 +477,8 @@ async function openActivity(activity) {
     `;
 
     contentArea.innerHTML = html;
+    contentArea.scrollTop = 0;
+    window.scrollTo(0, 0);
     await renderMath();
 
     const textarea = document.getElementById(`activity-editor-${activity.id}`);
