@@ -270,7 +270,7 @@ def seed_db(db: Session):
         markdown_file=os.path.join(BASE_DIR, 'content', 'lessons', 'lesson1.md')
     )
     upsert_task(db, lesson1.id, 1, 1, "Skriv ut texten 'Hej mattegeni!'.", "print()")
-    upsert_task(db, lesson1.id, 2, 1, "Skriv ut <strong>talet</strong> 42 (d v s utan citattecken).", "")
+    upsert_task(db, lesson1.id, 2, 1, "Skriv ut <strong>talet</strong> 42 (d v s utan citattecken).", "print()")
     upsert_task(db, lesson1.id, 3, 1, "Skriv ut texten 'Svaret är' följt av <strong>talet</strong> 42 på samma rad.", "print('Svaret är', )")
     upsert_task(db, lesson1.id, 4, 1, "Låt programmet skriva ut resultatet av beräkningen 15 + 23.", "print()")
     upsert_task(db, lesson1.id, 5, 1, "Låt programmet skriva ut resultatet av beräkningen 100 - 34 / 2.", "")

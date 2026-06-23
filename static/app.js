@@ -249,6 +249,12 @@ async function openLesson(lesson) {
     window.scrollTo(0, 0);
     if (typeof closeMobileMenu === 'function') closeMobileMenu();
     await renderMath();
+    
+    if (window.hljs) {
+        contentArea.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightElement(block);
+        });
+    }
 
     // Initialize CodeMirror instances
     editors = {};
@@ -482,6 +488,12 @@ async function openActivity(activity) {
     window.scrollTo(0, 0);
     if (typeof closeMobileMenu === 'function') closeMobileMenu();
     await renderMath();
+
+    if (window.hljs) {
+        contentArea.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightElement(block);
+        });
+    }
 
     const textarea = document.getElementById(`activity-editor-${activity.id}`);
     if (textarea) {
