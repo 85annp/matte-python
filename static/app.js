@@ -251,9 +251,7 @@ async function openLesson(lesson) {
     await renderMath();
     
     if (window.hljs) {
-        contentArea.querySelectorAll('pre code').forEach((block) => {
-            hljs.highlightElement(block);
-        });
+        window.hljs.highlightAll();
     }
 
     // Initialize CodeMirror instances
@@ -490,9 +488,7 @@ async function openActivity(activity) {
     await renderMath();
 
     if (window.hljs) {
-        contentArea.querySelectorAll('pre code').forEach((block) => {
-            hljs.highlightElement(block);
-        });
+        window.hljs.highlightAll();
     }
 
     const textarea = document.getElementById(`activity-editor-${activity.id}`);
