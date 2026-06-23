@@ -270,15 +270,15 @@ def seed_db(db: Session):
         markdown_file=os.path.join(BASE_DIR, 'content', 'lessons', 'lesson1.md')
     )
     upsert_task(db, lesson1.id, 1, 1, "Skriv ut texten 'Hej mattegeni!'.", "print()")
-    upsert_task(db, lesson1.id, 2, 1, "Skriv ut talet 42.", "")
-    upsert_task(db, lesson1.id, 3, 1, "Skriv ut texten 'Svaret är' följt av talet 42 på samma rad.", "print('Svaret är', )")
-    upsert_task(db, lesson1.id, 4, 1, "Låt programmet beräkna 15 + 23 och skriv ut resultatet.", "")
-    upsert_task(db, lesson1.id, 5, 1, "Låt programmet beräkna 100 - 34 / 2 och skriv ut resultatet.", "")
+    upsert_task(db, lesson1.id, 2, 1, "Skriv ut <strong>talet</strong> 42 (d v s utan citattecken).", "")
+    upsert_task(db, lesson1.id, 3, 1, "Skriv ut texten 'Svaret är' följt av <strong>talet</strong> 42 på samma rad.", "print('Svaret är', )")
+    upsert_task(db, lesson1.id, 4, 1, "Låt programmet skriva ut resultatet av beräkningen 15 + 23.", "print()")
+    upsert_task(db, lesson1.id, 5, 1, "Låt programmet skriva ut resultatet av beräkningen 100 - 34 / 2.", "")
     upsert_task(db, lesson1.id, 1, 2, "Skriv ut kostnaden för två tröjor och ett par jeans. Du vet att en tröja kostar 199 kr och ett par jeans kostar 799 kr.<br><i>Tänk på att det är programmet som ska göra beräkningen.</i>", "print('Det kommer att kosta', , 'kr.')")
-    upsert_task(db, lesson1.id, 2, 2, "Gör en tydlig utskrift av hur långt man kommer på 2,5 timmar om man kör med hastigheten 60 km/h.<br><i>Tänk på att det är programmet som ska göra beräkningen.</i>", "print('Om du kör...', )")
+    upsert_task(db, lesson1.id, 2, 2, "Gör en tydlig utskrift av hur långt man kommer på 2,5 timmar om man kör med hastigheten 60 km/h.<br><i>Tänk på att det är programmet som ska göra beräkningen.</i>", "print('Om du kör ', )")
     upsert_task(db, lesson1.id, 3, 2, "Beräkna <math><mfrac><mi>9</mi> <mi>3</mi></mfrac></math> och <math><mfrac><mi>10</mi> <mi>3</mi></mfrac></math> med både <code>/</code> och <code>//</code> och skriv ut resultatet. Jämför resultaten.", "")
     upsert_task(db, lesson1.id, 4, 2, "Det finns ett räknesätt som man i Python skriver <code>**</code> för att få. Beräkna <code>2**2</code>, <code>2**3</code> och <code>3**2</code> och skriv ut resultaten. Vad är det för räknesätt?", "print('2**2 =', 2**2)\nprint('2**3 =', )")
-    upsert_task(db, lesson1.id, 5, 2, "Du har 500 kr. Du köper 4 glassar: 2 strutar för 29,30 kr/st och 2 pinnglassar för 18,90 kr/st. Skriv ett program som beräknar och skriver ut hur mycket pengar du har kvar.", "")
+    upsert_task(db, lesson1.id, 5, 2, "Du har 500 kr. Du köper 4 glassar: <ul><li>2 strutar för 29,30 kr/st och</li><li>2 pinnglassar för 18,90 kr/st</li></ul>. Skriv ett program som beräknar och skriver ut hur mycket pengar du har kvar.", "")
 
     lesson2 = get_or_create_lesson(
         db,
