@@ -248,11 +248,13 @@ async function openLesson(lesson) {
     document.querySelector('.main-content').scrollTop = 0;
     window.scrollTo(0, 0);
     if (typeof closeMobileMenu === 'function') closeMobileMenu();
-    await renderMath();
-    
     if (window.hljs) {
-        window.hljs.highlightAll();
+        contentArea.querySelectorAll('pre code').forEach((block) => {
+            delete block.dataset.highlighted;
+            window.hljs.highlightElement(block);
+        });
     }
+    await renderMath();
 
     // Initialize CodeMirror instances
     editors = {};
@@ -485,11 +487,13 @@ async function openActivity(activity) {
     document.querySelector('.main-content').scrollTop = 0;
     window.scrollTo(0, 0);
     if (typeof closeMobileMenu === 'function') closeMobileMenu();
-    await renderMath();
-
     if (window.hljs) {
-        window.hljs.highlightAll();
+        contentArea.querySelectorAll('pre code').forEach((block) => {
+            delete block.dataset.highlighted;
+            window.hljs.highlightElement(block);
+        });
     }
+    await renderMath();
 
     const textarea = document.getElementById(`activity-editor-${activity.id}`);
     if (textarea) {
