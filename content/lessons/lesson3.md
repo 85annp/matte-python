@@ -47,7 +47,7 @@ Eftersom en radie kan vara ett decimaltal (t.ex. $3.5$ cm) är det bäst att anv
 # Vi tar emot texten och omvandlar den direkt till ett decimaltal
 radie = float(input("Skriv cirkelns radie i cm: "))
 
-# Formeln för area: pi * r^2
+# Formeln för area: pi * r²
 area = 3.14159 * radie * radie
 
 print("Cirkelns area är:", area)
