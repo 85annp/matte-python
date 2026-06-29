@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/dracula.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+</head>
+<body>
+    <pre><code id="test-block" class="language-python">print("Hello")</code></pre>
+    <script>
+        try {
+            hljs.highlightElement(document.getElementById('test-block'));
+            console.log("SUCCESS");
+            document.body.innerHTML += "<p id='status'>SUCCESS</p>";
+        } catch (e) {
+            console.error(e);
+            document.body.innerHTML += "<p id='status'>ERROR: " + e.message + "</p>";
+        }
+    </script>
+</body>
+</html>
