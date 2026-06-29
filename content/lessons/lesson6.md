@@ -28,7 +28,6 @@ if tal % 2 == 0:
     print("Talet är ett jämnt tal.")
 else:
     print("Talet är ett udda tal.")
-
 ```
 
 #### Kodexempel: Tidsomvandling
@@ -57,7 +56,6 @@ x = float(input("Skriv ett tal: "))
 
 if x >= 10 and x <= 50:
     print("Talet ligger i intervallet mellan 10 och 50!")
-
 ```
 
 #### 💡 Matte-genvägen i Python!
@@ -72,7 +70,6 @@ if 10 <= x <= 50:
     print("Talet ligger i intervallet mellan 10 och 50!")
 else:
     print("Talet ligger utanför intervallet.")
-
 ```
 
 Det här gör koden mycket renare och lättare att förstå för någon som är van vid matematisk notation!
@@ -91,7 +88,6 @@ if tal % 3 == 0 or tal % 5 == 0:
     print("Talet är delbart med 3, 5 eller båda!")
 else:
     print("Talet är inte delbart med något av dem.")
-
 ```
 
 ### Sammanfattning för minnet

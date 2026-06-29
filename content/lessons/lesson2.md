@@ -17,7 +17,6 @@ hojden = 5
 area = (basen * hojden) / 2
 
 print("Triangelns area är:", area)
-
 ```
 
 ### Hur du namnger dina variabler
@@ -45,7 +44,6 @@ pi = 3.14
 
 # FEL SÄTT: Detta kommer att krascha eller ge felaktigt resultat
 pi = 3,14
-
 ```
 
 #### Varför är det så?
@@ -56,7 +54,6 @@ Python använder internationell (amerikansk) standard där punkt är decimalteck
 # Här används kommatecknet för att separera texten från variabeln
 pris = 49.50
 print("Boken kostar", pris, "kronor.")
-
 ```
 
 ### Sammanfattning för minnet

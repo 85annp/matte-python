@@ -15,7 +15,6 @@ Om vi bara vill skriva ut talen 1 till 5 vet vi antalet varv i förväg.
 ```python
 for i in range(1, 6):
     print(i)
-
 ```
 
 **Med `while`:**
@@ -26,7 +25,6 @@ i = 1
 while i <= 5:
     print(i)
     i = i + 1  # Öka i med 1 för varje varv, annars stannar loopen aldrig!
-
 ```
 
 #### Exempel 2: Halvera ett tal tills det är mindre än 1 (bara `while` fungerar!)
@@ -47,7 +45,6 @@ while tal > 1:
 
 print("Loopen är klar!")
 print("Det krävdes", steg, "halveringar.")
-
 ```
 
 <img src="/illustrations/while_illustration.png" alt="Exempel med while-sats" class="theory-image">
@@ -77,7 +74,6 @@ while True:
 # Den här koden nås först när vi har kört "break"
 rot = math.sqrt(tal)
 print("Kvadratroten ur", tal, "är", rot)
-
 ```
 
 **Varför är detta så smidigt?**

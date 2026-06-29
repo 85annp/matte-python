@@ -9,7 +9,6 @@ En lista skapas genom att vi räknar upp alla värden med kommatecken mellan och
 ```python
 # En lista med provresultat (procent)
 resultat = [45, 82, 77, 91, 54, 77]
-
 ```
 
 #### Färdiga funktioner för listor
@@ -74,7 +73,6 @@ medel = total_summa / antal_dagar
 print("Högsta temp:", max(temperaturer), "°C")
 print("Lägsta temp:", min(temperaturer), "°C")
 print("Medeltemperaturen över", antal_dagar, "dagar var:", round(medel, 1), "°C")
-
 ```
 
 ### Tillämpning: Sannolikhet (frekvens)
@@ -95,7 +93,6 @@ sannolikhet_sexa = antal_sexor / totalt_antal
 
 print("Antal sexor:", antal_sexor)
 print("Experimentell sannolikhet för en sexa:", sannolikhet_sexa)
-
 ```
 
 ### Rita grafer med `matplotlib.pyplot`
@@ -112,7 +109,8 @@ Här skapar vi en graf över hur temperaturen förändras under en dag:
 # Importera plotverktyget och ge det smeknamnet plt
 import matplotlib.pyplot as plt 
 
-# Vår värdetabell uppdelad i x- och y-värden (måste innehålla lika många element!)
+# Vår värdetabell uppdelad i x- och y-värden 
+# De måste innehålla lika många element!
 tid_timmar = [8, 10, 12, 14, 16, 18]
 temp_grader = [10, 14, 19, 21, 18, 13]
 

@@ -37,7 +37,6 @@ if tal > 0:
     print("Talet är positivt!")
 else:
     print("Talet är INTE positivt!")
-
 ```
 
 **Titta noga på strukturen:**
@@ -65,7 +64,6 @@ elif tal < 0:
     print("Talet är negativt!")
 else:
     print("Talet är exakt noll!")
-
 ```
 
 **Så här tänker datorn här:**

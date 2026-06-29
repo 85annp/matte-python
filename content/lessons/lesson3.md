@@ -11,7 +11,6 @@ Det som användaren skriver sparas i en variabel:
 ```python
 namn = input("Vad heter du? ")
 print("Hej", namn)
-
 ```
 <img src="/illustrations/input_illustration.png" alt="Exempel med input()" class="theory-image">
 
@@ -25,8 +24,7 @@ Om användaren skriver in siffran `5`, så ser Python det inte som talet $5$, ut
 # OBS! Det här fungerar INTE som du tror:
 tal = input("Skriv ett tal: ") # Användaren skriver 5
 resultat = tal * 2             # Python gör text-multiplikation!
-print(resultat)                # Svaret blir 55 (texten "5" två gånger), inte 10!
-
+print(resultat)                # Svaret blir 55 (texten "5" två gånger)
 ```
 
 
@@ -51,7 +49,6 @@ radie = float(input("Skriv cirkelns radie i cm: "))
 area = 3.14159 * radie * radie
 
 print("Cirkelns area är:", area)
-
 ```
 
 ### Avrunda resultatet i en `print()`

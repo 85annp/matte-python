@@ -23,7 +23,6 @@ ranta = 1.04
 for ar in range(1, 6):
     kapital = kapital * ranta
     print("Efter år", ar, "är kapitalet", round(kapital, 2), "kr.")
-
 ```
 
 **Hur fungerar `kapital = kapital * ranta`?**
@@ -51,7 +50,6 @@ while kapital < 20000:
 
 print("Det tar", ar, "år innan pengarna har fördubblats.")
 print("Det exakta kapitalet är då", round(kapital, 2), "kr.")
-
 ```
 
 #### Så här tänker datorn:

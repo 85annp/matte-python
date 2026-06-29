@@ -7,7 +7,6 @@ För att använda Turtle måste vi hämta en modul som inte fungerar här på we
 
 ```python
 import turtle
-
 ```
 
 ### Grunderna: Flytta pennan
@@ -73,7 +72,6 @@ for i in range(4):
     turtle.right(90)     # 360 / 4 = 90
 
 turtle.done()
-
 ```
 
 **En liksidig triangel (3 sidor):**
@@ -88,7 +86,6 @@ for i in range(3):
     turtle.right(120)    # 360 / 3 = 120 (Yttervinkeln!)
 
 turtle.done()
-
 ```
 
 ### Generalisera: Rita VILKEN polygon som helst
@@ -114,7 +111,6 @@ for i in range(antal_sidor):
     turtle.right(vinkel)
 
 turtle.done()
-
 ```
 
 **Avslutande tips:** 
