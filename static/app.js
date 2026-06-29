@@ -250,8 +250,15 @@ async function openLesson(lesson) {
     if (typeof closeMobileMenu === 'function') closeMobileMenu();
     if (window.hljs) {
         contentArea.querySelectorAll('pre code').forEach((block) => {
-            delete block.dataset.highlighted;
-            window.hljs.highlightElement(block);
+            try {
+                delete block.dataset.highlighted;
+                if (!block.className.includes('language-') && !block.className.includes('python')) {
+                    block.classList.add('language-python');
+                }
+                window.hljs.highlightElement(block);
+            } catch(e) {
+                console.error("Highlight error:", e);
+            }
         });
     }
     await renderMath();
@@ -489,8 +496,15 @@ async function openActivity(activity) {
     if (typeof closeMobileMenu === 'function') closeMobileMenu();
     if (window.hljs) {
         contentArea.querySelectorAll('pre code').forEach((block) => {
-            delete block.dataset.highlighted;
-            window.hljs.highlightElement(block);
+            try {
+                delete block.dataset.highlighted;
+                if (!block.className.includes('language-') && !block.className.includes('python')) {
+                    block.classList.add('language-python');
+                }
+                window.hljs.highlightElement(block);
+            } catch(e) {
+                console.error("Highlight error:", e);
+            }
         });
     }
     await renderMath();
